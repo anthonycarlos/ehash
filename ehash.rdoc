@@ -1,0 +1,5 @@
+= ehash
+
+Generate this with
+    ehash rdoc
+After you have described your command line interface

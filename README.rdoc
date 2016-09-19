@@ -1,0 +1,6 @@
+= ehash
+
+Describe your project here
+
+:include:ehash.rdoc
+
