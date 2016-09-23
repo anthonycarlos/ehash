@@ -11,7 +11,7 @@ end
 
 include GLI::App
 
-program_desc 'Describe your application here'
+program_desc 'Encrypted Hash. An array of hashes to store and find stuff.'
 
 version Ehash::VERSION
 
@@ -32,13 +32,14 @@ command :new do |c|
   c.desc 'Describe a switch to new'
   c.switch :s
 
-  c.desc 'Describe a flag to new'
-  c.default_value 'default'
+  c.desc 'The ehash data file to use'
+  c.default_value File.join(Dir.home, 'ehash.yml')
   c.flag :f
   c.action do |global_options,options,args|
 
     # Your command logic here
-     
+    data_file_path = options[:f] || c.default_value
+    File.open(data_file_path, 'w') { |file| YAML::dump([]) }
     # If you have any errors, just raise them
     # raise "that command made no sense"
 
