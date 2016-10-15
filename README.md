@@ -19,24 +19,24 @@ This command-suite utility encrypts an array of hashes for storing stuff.
 
 ##Example Design
 
-$ ehash new
-# => Creates a new data file in the default location.
+`$ ehash new`
+  => Creates a new data file in the default location.
 
-$ ehash -f /home/me/ehash.yml.enc new
-# => Creates a new data file in /home/me/ehash.yml.enc.
+`$ ehash -f /home/me/ehash.yml.enc new`
+  => Creates a new data file in /home/me/ehash.yml.enc.
 
-$ ehash password
-# => Old password: ########
-# => New password: ########
-# => New password again: ########
-# => Changes password of data file.
+`$ ehash password`
+  => Old password: ########
+  => New password: ########
+  => New password again: ########
+  => Changes password of data file.
 
-$ ehash add username:monty,password:pyth0n
-# => Saves a new hash { id:<new>, version:1, username:monty, password:pyth0n } to the data file.
+`$ ehash add username:monty,password:pyth0n`
+  => Saves a new hash { id:<new>, version:1, username:monty, password:pyth0n } to the data file.
 
-$ ehash find mon
-# => { id:100, username:monty, password: pyth0n }
+`$ ehash find mon`
+  => { id:100, username:monty, password: pyth0n }
 
-$ ehash -o password find mon
-# => { password: pyth0n }
+`$ ehash -o password find mon`
+  => { password: pyth0n }
 
